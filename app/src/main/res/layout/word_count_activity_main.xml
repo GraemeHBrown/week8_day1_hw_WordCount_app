@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.codeclan.example.wordcounter.WordCounterActivity">
+
+    <EditText
+        android:id="@+id/textBlock"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/background_dark"
+        android:ems="10"
+        android:hint="@string/enter_a_block_of_text_to_count"
+        android:inputType="textMultiLine"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.24000001" />
+
+    <Button
+        android:id="@+id/get_word_count_button"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:onClick="onCountButtonClick"
+        android:text="@string/get_word_count"
+        app:layout_constraintEnd_toEndOf="@+id/textBlock"
+        app:layout_constraintStart_toStartOf="@+id/textBlock"
+        app:layout_constraintTop_toBottomOf="@+id/textBlock" />
+
+    <TextView
+        android:id="@+id/word_count"
+        android:layout_width="103dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/get_word_count_button"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/get_word_count_button"
+        app:layout_constraintTop_toBottomOf="@+id/get_word_count_button"
+        app:layout_constraintVertical_bias="0.234" />
+
+    <TextView
+        android:id="@+id/magicNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/word_count"
+        app:layout_constraintStart_toStartOf="@+id/word_count"
+        app:layout_constraintTop_toBottomOf="@+id/word_count" />
+
+</android.support.constraint.ConstraintLayout>
