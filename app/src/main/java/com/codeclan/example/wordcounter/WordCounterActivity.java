@@ -31,6 +31,6 @@ public class WordCounterActivity extends AppCompatActivity {
         counter = new WordCount();
         Integer count = counter.countWords(block);
         wordCount.setText(count.toString());
-        magicNumber.setText("... is the magic number!");
+        magicNumber.setText("... is the magic number!!");
     }
 }
